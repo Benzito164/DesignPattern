@@ -21,7 +21,7 @@ public class DemoTest extends BaseTest{
 WebDriver driver;
     TravelHomePage travelHomePage;
 
-    @BeforeTest
+   // @BeforeTest
     public void setup()
     {
         driver =initializeDriver();
@@ -30,7 +30,7 @@ WebDriver driver;
 
 
 
-    @Test(dataProvider = "getData")
+  //  @Test(dataProvider = "getData")
     public void flightTest(HashMap<String,String> reservationDetails)
     {
 
@@ -44,13 +44,13 @@ WebDriver driver;
         travelHomePage.checkAvail(reservationDetails);
     }
 
-    @AfterTest
+   // @AfterTest
     public void tearDown()
     {
         driver.quit();
     }
 
-    @DataProvider
+  //  @DataProvider
     //hashmaps,dataprovider, json, jackson,list
     public Object[][] getData() throws IOException {
         List<HashMap<String, String>> l=getJsonData(System.getProperty("user.dir")+"//src//test//java//org//rahulshettyacademy//DataLoads//reservationDetails.json");
